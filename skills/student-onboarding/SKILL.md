@@ -26,6 +26,7 @@ Use this skill for new student-project setup in the RSL shared Drive and spreads
    - anonymous or non-account-bound forms can use direct `viewform` / `formResponse` submission
    - signed-in forms that record the supervisor email must use the live Chrome session through local CDP tooling
 9. Before the GitHub-group step, ask for the student's GitHub handle if it is not already known. Do not contact Fang Nan without the exact handle.
+10. For Chat-related steps, send only the specific message the user asked for. Do not create autonomous watchers, auto-repliers, or background chat loops.
 
 ## Guardrails
 
@@ -37,7 +38,11 @@ Use this skill for new student-project setup in the RSL shared Drive and spreads
 - Do not assume all Google Forms can be submitted through `gws`; `gws` does not create Google Forms responses.
 - For signed-in Google Forms, prefer the local Chrome CDP workflow over brittle UI key injection.
 - For Fang Nan / GitHub-group requests, prefer the Google Chat API over browser automation when Chat scopes are available.
+- Use the Google Chat API as an explicit assistant tool, not as a persistent bot.
+- Do not run persistent chat watchers or auto-reply loops in shared spaces.
+- When sending a message as the assistant, use first-person wording and keep the tone short and informal unless the user asks otherwise.
 - If needed, send the same Fang Nan request by email as a fallback or visibility duplicate.
+- For lab Chat messages, prefer short, informal wording. Avoid stiff language unless the situation actually requires it.
 
 ## Reference
 

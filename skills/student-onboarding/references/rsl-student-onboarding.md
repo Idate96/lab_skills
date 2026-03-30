@@ -298,6 +298,12 @@ Preferred contact channel:
 
 - Google Chat API, not browser automation
 
+Messaging rule:
+
+- use the Chat API only for explicit read/send actions requested by the user
+- do not create background chat watchers, autonomous reply loops, or bot-like monitoring in shared spaces
+- when replying as the assistant, write in first person and keep the wording simple
+
 Current reproducible API path:
 
 1. Make sure `gws` auth includes:
@@ -338,4 +344,5 @@ Observed result:
 - The Euler form and the student-PC form are different classes of Google Forms:
   - Euler form: raw `formResponse` automation works
   - student-PC form: signed-in Chrome + CDP is required
+- Chat automation here means one explicit assistant action at a time, not an autonomous bot.
 - The Fang Nan step should use the Chat API, not browser automation, once the required Chat + Directory scopes are present.
